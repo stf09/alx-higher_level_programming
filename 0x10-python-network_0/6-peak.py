@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Finds a peak in a list of unsorted integers"""
-
-
+"""script for finding peak in list of ints
+"""
 def find_peak(list_of_integers):
-    """Finds a peak in list_of_integers"""
-
-    if list_of_integers is None or list_of_integers == []:
-        return None
-    else:
-        return max(list_of_integers)
+    """BRUTE force implementation for question
+    """
+    max_i = None
+    for ele in list_of_integers:
+        if max_i is None or max_i < ele:
+            max_i = ele
+    return max_i
